@@ -15,6 +15,9 @@ router.use(decodeUserFromToken)
 //create
 router.post('/', checkAuth, typesCtrl.createType)
 
+//delete
+router.delete('/:id', checkAuth, typesCtrl.delete)
+
 export {
   router
 }

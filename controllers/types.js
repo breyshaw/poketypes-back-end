@@ -14,7 +14,14 @@ function index(req, res) {
     })
 }
 
+function deleteType(req, res) {
+  Type.findByIdAndDelete(req.params.id)
+  .then(type => res.json(type)) //returning the deleted type as a JSON object so I can store it as a variable to remove the deleted type from state on the front-end
+  .catch(err => res.json(err))
+}
+
 export {
   createType,
   index,
+  deleteType as delete
 }
