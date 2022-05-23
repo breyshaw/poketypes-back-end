@@ -15,6 +15,9 @@ router.use(decodeUserFromToken)
 //create
 router.post('/', checkAuth, typesCtrl.createType)
 
+//update
+router.put('/:id', checkAuth, typesCtrl.update)
+
 //delete
 router.delete('/:id', checkAuth, typesCtrl.delete)
 
