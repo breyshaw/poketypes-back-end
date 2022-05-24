@@ -9,8 +9,8 @@ function createType(req, res) {
 
 function index(req, res) {
   Type.find({})
-    .then(items => {
-      res.json(items)
+    .then(types => {
+      res.json(types)
     })
 }
 
